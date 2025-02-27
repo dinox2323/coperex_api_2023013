@@ -4,7 +4,7 @@ import { generateJWT } from "../helpers/generate-jwt.js"
 
 export const createAdminUser = async () => {
     try {
-        const existingAdmin = await Admin.findOne({ role: "ADMIN" });
+        const existingAdmin = await Admin.findOne({ role: "ADMIN_ROLE" });
         if (existingAdmin) {
             console.log("Admin ya existe");
             return;
@@ -17,7 +17,7 @@ export const createAdminUser = async () => {
             phone: "12345678",
             email: "admin@tuapp.com",
             password: await hash("admin123"),
-            role: "ADMIN"
+            role: "ADMIN_ROLE"
         };
 
         await Admin.create(adminData);
