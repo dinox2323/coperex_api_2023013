@@ -30,3 +30,23 @@ export const loginValidator = [
     validarCampos,
     handleErrors
 ];
+
+export const updateProfilePictureValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(adminExists),
+    validarCampos,
+    deleteFileOnError,
+    handleErrors
+];
+
+export const editProfileValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(adminExists),
+    body("name").optional().isString().withMessage("El nombre debe ser una cadena de texto"),
+    body("username").optional().isString().withMessage("El nombre de usuario debe ser una cadena de texto"),
+    body("currentPassword").optional().isLength({ min: 4 }).withMessage("La contraseña actual debe contener al menos 4 caracteres"),
+    body("newPassword").optional().isLength({ min: 4 }).withMessage("La nueva contraseña debe contener al menos 4 caracteres"),
+    validarCampos,
+    handleErrors
+];
+

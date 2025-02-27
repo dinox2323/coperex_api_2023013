@@ -6,6 +6,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
 import authRoutes from "../src/auth/auth.routes.js"
+import adminRoutes from "../src/admin/admin.routes.js"
 import {createAdminUser} from "../src/auth/auth.controller.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import { swaggerDocs, swaggerUi } from "./swagger.js";
@@ -21,8 +22,8 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/coperex-2023013/v1/auth", authRoutes);
+    app.use("/coperex-2023013/v1/admin", adminRoutes);
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
-
 }
 
 const conectarDB = async () => {
