@@ -1,4 +1,4 @@
-import { body } from "express-validator";
+import { body,query } from "express-validator";
 import { emailExistEmpresas,addressExists } from "../helpers/db-validator.js";
 import { validarCampos } from "./validate-fields.js";
 import { deleteFileOnError } from "./delete-file-on-error.js";
