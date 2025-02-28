@@ -1,14 +1,21 @@
 import { Router } from "express";
-import { registroEmpresas 
+import { registroEmpresas,
+        getEmpresas
+        
 
 } from "../empresas/empresas.controller.js";
 import {
-    registerEmpresasValidator
+    registerEmpresasValidator,
+    getEmpresasValidator
 } from "../middlewares/empresas-validator.js";
 
-const router = express.Router();
+const router = Router();
 
 router.post("/empresas", registerEmpresasValidator, registroEmpresas);
+router.get("/empresas", getEmpresasValidator, getEmpresas);
+
+
+
 
 export default router;
 

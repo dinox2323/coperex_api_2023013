@@ -4,10 +4,10 @@ import {
     editProfile
 } from "./admin.controller.js";
 import {
-    updateProfilePicture,
+    updateProfilePictureValidator,
     editProfileValidator
 } from "../middlewares/admin-validator.js";
-import { uploadProfilePicture } from "../middlewares/multer-uploads";
+import { uploadProfilePicture } from "../middlewares/multer-uploads.js";
 
 const router = Router();
 
