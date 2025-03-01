@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "67c27853472769ddaf40c52e"
+  },
+  "name": "Tech Solutions",
+  "address": "Av. Principal #123",
+  "email": "contacto@techsolutions.com",
+  "phone": "12345678",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 25,
+  "category": "Tecnología",
+  "fundation": 2000
+},
+{
+  "_id": {
+    "$oid": "67c2821b281272552a9bb9b0"
+  },
+  "name": "Tech Innovators",
+  "address": "Av. Tec 123",
+  "email": "contacto@techinnovators.com",
+  "phone": "55551234",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 30,
+  "category": "Tecnología",
+  "fundation": 1995
+},
+{
+  "_id": {
+    "$oid": "67c28227281272552a9bb9b3"
+  },
+  "name": "EcoVerde",
+  "address": "Calle Verde 456",
+  "email": "info@ecoverde.org",
+  "phone": "55555678",
+  "impactLevel": "Medio",
+  "yearsOfExperience": 17,
+  "category": "Medio Ambiente",
+  "fundation": 2008
+},
+{
+  "_id": {
+    "$oid": "67c2822f281272552a9bb9b6"
+  },
+  "name": "SaludGlobal",
+  "address": "Blvd. Salud 789",
+  "email": "atencion@saludglobal.com",
+  "phone": "55559012",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 13,
+  "category": "Salud",
+  "fundation": 2012
+}]

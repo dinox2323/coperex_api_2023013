@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "67c29060e14dbe72f055fa1a"
+  },
+  "name": "Cerveceria Gallo",
+  "address": "Av. Principal #123",
+  "email": "contacto@cerveceria.com",
+  "phone": "46839645",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 51,
+  "category": "Bebidas",
+  "fundation": 1974
+},
+{
+  "_id": {
+    "$oid": "67c2921ee14dbe72f055fa24"
+  },
+  "name": "Gentrac",
+  "address": "Boulevard san juan 46-12",
+  "email": "contacto@gentrac.com",
+  "phone": "46893246",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 40,
+  "category": "Maquinaria",
+  "fundation": 1985
+}]

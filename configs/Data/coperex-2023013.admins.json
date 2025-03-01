@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "67c28e1f7fc74de7066583e4"
+  },
+  "name": "Admin",
+  "surname": "admin",
+  "username": "admin",
+  "email": "admin@tuapp.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$LCrUDg7Jz8TKAjc/aCR8iQ$PItuxc85npaEP+MnqmdVdhKDIiEt8dEXtrGT9C7ApWY",
+  "phone": "12345678",
+  "role": "ADMIN_ROLE",
+  "status": true
+}]

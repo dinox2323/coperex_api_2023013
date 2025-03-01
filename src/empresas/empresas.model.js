@@ -32,13 +32,28 @@ const empresasSchema = Schema ({
         type: String,
         required: true
     },
+<<<<<<< Updated upstream
     createdDateCreation: {
         type: Number,
       }
+=======
+
+    fundation: {
+        type: Number,
+        required: true
+    }
+>>>>>>> Stashed changes
 },
 {
     versionKey: false,
     timeStamps: true
 })
+
+empresasSchema.methods.toJSON = function(){
+    const {__v, password, _id, ...empresa} = this.toObject()
+    empresa.uid = _id
+        return empresa
+    
+}
 
 export default model("Empresas", empresasSchema)
