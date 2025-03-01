@@ -24,11 +24,9 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/coperex-2023013/v1/auth", authRoutes);
     app.use("/coperex-2023013/v1/admin", adminRoutes);
-<<<<<<< Updated upstream
     app.use("/coperex-2023013/v1/empresas",empresasRoutes);
-=======
+
     app.use("/coperex-2023013/v1/empresas", empresasRoutes);
->>>>>>> Stashed changes
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 

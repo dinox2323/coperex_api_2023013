@@ -53,6 +53,10 @@ router.post(
  *         description: Invalid input
  */
 router.post(
+
+  );
+
+  router.post(
     "/register",
     uploadProfilePicture.single("profilePicture"),
     registerValidator,
@@ -60,3 +64,6 @@ router.post(
 );
 
 export default router;
+  );
+  
+  export default router;

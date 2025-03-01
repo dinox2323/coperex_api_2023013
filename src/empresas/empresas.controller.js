@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url';
 
 
 export const registroEmpresas = async (req, res) => {
-<<<<<<< Updated upstream
     try {
         const data = req.body
 
@@ -17,7 +16,6 @@ export const registroEmpresas = async (req, res) => {
 
       res.status(201).json({
         empresa
-=======
     const data = req.body
     try {
 
@@ -27,8 +25,14 @@ export const registroEmpresas = async (req, res) => {
       await empresas.save();
       res.status(201).json({
         empresas
->>>>>>> Stashed changes
       });
+
+export const registroEmpresas = async (req, res) => {
+    const { name, impactLevel,address, yearsOfExperience, category, email, phone } = req.body;
+    try {
+      const empresas = new Empresa({ name,address, impactLevel, yearsOfExperience, category, email, phone });
+      await empresas.save();
+      res.status(201).json(empresas);
     } catch (error) {
       res.status(400).json({ message: error.message });
     }
@@ -39,7 +43,6 @@ export const registroEmpresas = async (req, res) => {
     const sortOptions = { [sortBy]: order === 'asc' ? 1 : -1 };
     const filterOptions = {};
   
-<<<<<<< Updated upstream
     if (category) filterOptions.category = category;
     if (minYearsOfExperience) {
       const minDate = new Date(new Date().setFullYear(new Date().getFullYear() - parseInt(minYearsOfExperience, 10)));
@@ -57,7 +60,6 @@ export const registroEmpresas = async (req, res) => {
       res.status(400).json({ message: error.message });
     }
   };
-=======
 
   export const editarEmpresa = async (req, res) => {
     try {
@@ -168,4 +170,4 @@ const enviarError = (res, codigo, mensaje, error = null) => {
     if (error) respuesta.error = error.message;
     res.status(codigo).json(respuesta);
 };
->>>>>>> Stashed changes
+  

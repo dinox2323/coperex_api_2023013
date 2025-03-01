@@ -1,9 +1,6 @@
 import Admin from "../admin/admin.model.js";
 import Empresas from "../empresas/empresas.model.js"
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 
 export const emailExists = async (email = "") => {
     const existe = await Admin.findOne({email})

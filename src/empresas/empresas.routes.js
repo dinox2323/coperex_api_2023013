@@ -1,32 +1,25 @@
 import { Router } from "express";
 import { registroEmpresas,
-<<<<<<< Updated upstream
         getEmpresas
         
-=======
     editarEmpresa,
     listarEmpresas
->>>>>>> Stashed changes
 
 } from "../empresas/empresas.controller.js";
 import {
     registerEmpresasValidator,
-<<<<<<< Updated upstream
     getEmpresasValidator
-=======
     actualizarEmpresasValidator
->>>>>>> Stashed changes
 } from "../middlewares/empresas-validator.js";
 
 const router = Router();
 
-<<<<<<< Updated upstream
 router.post("/empresas", registerEmpresasValidator, registroEmpresas);
 router.get("/empresas", getEmpresasValidator, getEmpresas);
 
 
 
-=======
+
 /**
  * @swagger
  * /empresas/registroEmpresa:
@@ -92,7 +85,16 @@ router.patch("/actualizarEmpresa/:uid",actualizarEmpresasValidator,editarEmpresa
  *                 // ...define properties for the response items...
  */
 router.get("/listarEmpresas", listarEmpresas)
->>>>>>> Stashed changes
+import { registroEmpresas 
+
+} from "../empresas/empresas.controller.js";
+import {
+    registerEmpresasValidator
+} from "../middlewares/empresas-validator.js";
+
+const router = express.Router();
+
+router.post("/empresas", registerEmpresasValidator, registroEmpresas);
 
 export default router;
 
