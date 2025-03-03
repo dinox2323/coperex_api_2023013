@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "67c5c8e1e6404718b207f5a0"
+  },
+  "name": "Tech Solutions",
+  "address": "Av. Principal #123",
+  "email": "contacto@techsolutions.com",
+  "phone": "12345678",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 25,
+  "category": "Tecnología",
+  "fundation": 2000
+},
+{
+  "_id": {
+    "$oid": "67c5c918e6404718b207f5a7"
+  },
+  "name": "ABC",
+  "address": "Av. Principal #123",
+  "email": "contacto@abc.com",
+  "phone": "12345678",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 11,
+  "category": "Tecnología",
+  "fundation": 2014
+},
+{
+  "_id": {
+    "$oid": "67c5c921e6404718b207f5aa"
+  },
+  "name": "BCD",
+  "address": "Av. Principal #123",
+  "email": "contacto@bcd.com",
+  "phone": "12345678",
+  "impactLevel": "Alto",
+  "yearsOfExperience": 11,
+  "category": "Tecnología",
+  "fundation": 2014
+}]

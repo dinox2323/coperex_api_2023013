@@ -33,12 +33,16 @@ const empresasSchema = Schema ({
 
     yearsOfExperience: {
         type: Number,
-        required: true
     },
 
 
     category: {
         type: String,
+        required: true
+    },
+
+    fundation: {
+        type: Number,
         required: true
     }
 },
@@ -46,5 +50,12 @@ const empresasSchema = Schema ({
     versionKey: false,
     timeStamps: true
 })
+
+empresasSchema.methods.toJSON = function(){
+    const {__v, password, _id, ...empresa} = this.toObject()
+    empresa.uid = _id
+        return empresa
+    
+}
 
 export default model("Empresas", empresasSchema)
