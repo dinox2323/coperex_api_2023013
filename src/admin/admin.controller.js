@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-export const updateProfilePicture = async (req, res) => {
+export const ProfilePicture = async (req, res) => {
     try {
         const { uid } = req.params;
         let newProfilePicture = req.file ? req.file.filename : null;

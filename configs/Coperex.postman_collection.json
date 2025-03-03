@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "2c6b5616-b51d-4f8e-8a5f-7d1041a81c65",
+		"name": "Coperex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38317977"
+	},
+	"item": [
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "Crear empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"BCD\",\r\n    \"address\": \"Av. Principal #123\",\r\n    \"email\": \"contacto@bcd.com\",\r\n    \"phone\": \"12345678\",\r\n    \"impactLevel\": \"Alto\",\r\n    \"category\": \"Tecnología\",\r\n    \"fundation\": 2014\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex-2023013/v1/empresas/registroEmpresa",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex-2023013",
+								"v1",
+								"empresas",
+								"registroEmpresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Empresa",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tech Solutions\",\r\n    \"address\": \"Av. Principal #123\",\r\n    \"email\": \"contacto@techsolutions.com\",\r\n    \"phone\": \"12345678\",\r\n    \"impactLevel\": \"Alto\",\r\n    \"category\": \"Tecnología\",\r\n    \"fundation\": 2000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex-2023013/v1/empresas/actualizarEmpresa/67c5c8e1e6404718b207f5a0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex-2023013",
+								"v1",
+								"empresas",
+								"actualizarEmpresa",
+								"67c5c8e1e6404718b207f5a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por filtros",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": \"Tecnología\",\r\n    \"aniosTrayectoria\": 25,\r\n    \"orden\": \"A-Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex-2023013/v1/empresas/listarEmpresas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex-2023013",
+								"v1",
+								"empresas",
+								"listarEmpresas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@tuapp.com\",\r\n    \"password\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/coperex-2023013/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"coperex-2023013",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
